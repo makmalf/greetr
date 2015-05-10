@@ -2,6 +2,14 @@
 jQuery(document).ready(function($) {
 
 	/*----------------------------------------------------*/
+	/* Loading Icon
+	------------------------------------------------------*/
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");;
+	});
+
+	/*----------------------------------------------------*/
 	/*	Make sure that #header-background-image height is
 	/* equal to the browser height.
 	------------------------------------------------------ */
@@ -40,6 +48,19 @@ jQuery(document).ready(function($) {
 	        window.location.hash = target;
 	    });
 	});
+
+	var platform = navigator.platform.toLowerCase();
+	if (platform.indexOf('win') == 0 || platform.indexOf('linux') == 0) {
+	    if ($.browser.webkit) {
+			$.srSmoothscroll({
+				// defaults
+				step: 100,
+				speed: 50,
+				target: $('body'),
+				container: $(window)
+			});
+	    }
+	 }
 
    	/*----------------------------------------------------*/
    	/* Sticky Menu Bar
