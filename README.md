@@ -15,4 +15,4 @@ A static template made (in progress) for anyone who wants to say hi online
 - SnapSVG (http://snapsvg.io/)
 
 # License
-No Worries. It's totally free. First of all: I'm not responsible for any kinds of risks might be came from this software. 
+No Worries. It's totally free. First of all: I'm not responsible for any kinds of risks might be came from usage of this software. 

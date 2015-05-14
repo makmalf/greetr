@@ -1,11 +1,11 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*-------------------------------
+ Reset
+-------------------------------*/
 /**
  * 1. Set default font family to sans-serif.
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-
-
 html {
   font-family: sans-serif;
   /* 1 */
@@ -64,6 +64,7 @@ video {
   /* 1 */
   vertical-align: baseline;
   /* 2 */
+  max-width: 100%;
 }
 
 /**
@@ -437,30 +438,9 @@ th {
   padding: 0;
 }
 
-.row:after, .clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-
-.row {
-  display: inline-block;
-}
-
-/* start commented backslash hack \*/
-* html .row {
-  height: 1%;
-}
-
-.row {
-  display: block;
-  margin-left: -15px;
-  margin-right: -15px;
-}
-
+/*-------------------------------
+ Buttons
+-------------------------------*/
 /**
  * Buttons
  */
@@ -485,6 +465,9 @@ a.btn {
   font-size: 46px;
 }
 
+/*-------------------------------
+ Circle Menu
+-------------------------------*/
 .menu {
   position: relative;
   display: inline-block;
@@ -620,6 +603,9 @@ a.btn {
     transform: scale3d(0.8, 0.8, 1);
   }
 }
+/*-------------------------------
+ Main Styling
+-------------------------------*/
 body {
   color: #555;
   font-size: 18px;
@@ -628,11 +614,42 @@ body {
   font-weight: 300;
 }
 
+/**
+ * Typography
+ */
+h1, h2, h3 {
+  font-weight: 300;
+  line-height: 1.3em;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 46px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 26px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
 a {
   color: #c5b954;
   text-decoration: none;
 }
 
+/**
+ * Helper Classes
+ */
 .no-margin {
   margin: 0;
 }
@@ -675,29 +692,30 @@ a {
   padding-right: 15px;
 }
 
-h1, h2, h3 {
-  font-weight: 300;
+.row:after, .clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+html .row {
+  height: 1%;
+}
+
+.row {
+  display: block;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.greetr-words {
+  font-size: 30px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   line-height: 1.3em;
-}
-
-h1 {
-  font-size: 60px;
-}
-
-h2 {
-  font-size: 46px;
-}
-
-h3 {
-  font-size: 36px;
-}
-
-h4 {
-  font-size: 26px;
-}
-
-h5 {
-  font-size: 18px;
 }
 
 .tooltipsy {
@@ -744,13 +762,6 @@ h5 {
 
 .text-center {
   text-align: center;
-}
-
-.greetr-words {
-  font-size: 30px;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  line-height: 1.3em;
 }
 
 /**
@@ -1042,4 +1053,34 @@ section#testimonials {
  */
 article.entry-content p {
   margin-bottom: 1.5em;
+}
+
+/**
+ * Loader Icon
+ */
+.no-js #loader {
+  display: none;
+}
+
+.js #loader {
+  display: block;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background: #555;
+  color: #c5b954;
+  font-size: 62px;
+  text-align: center;
+  padding-top: 86px;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
